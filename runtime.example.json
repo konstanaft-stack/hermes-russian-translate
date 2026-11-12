@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "device": "cpu",
+  "cpu_threads": 4,
+  "gpu_layers": 99,
+  "profiles": {
+    "q8": {
+      "server": "../plugins/hermes-ru-translator/vendor/llama-cpu/llama-server.exe",
+      "model": "../plugins/hermes-ru-translator/models/Hy-MT2-1.8B-Q8_0.gguf"
+    }
+  }
+}

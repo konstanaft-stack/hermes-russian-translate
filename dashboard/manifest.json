@@ -1,0 +1,8 @@
+{
+  "name": "hermes-ru-translator",
+  "label": "Hermes Russian Translate",
+  "description": "Перевод плагинов, навыков, шаблонов задач и встроенного браузера; явное управление локальными моделями",
+  "icon": "Globe",
+  "version": "1.0.0",
+  "api": "plugin_api.py"
+}

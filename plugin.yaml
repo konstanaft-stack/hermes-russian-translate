@@ -1,0 +1,13 @@
+manifest_version: 1
+name: hermes-ru-translator
+version: 1.0.0
+description: Три локальных профиля HY-MT2 en→ru для плагинов, навыков, задач и встроенного браузера; один CPU/GPU-движок за раз, явная загрузка/выгрузка, отдельный SQLite-кэш профилей.
+author: konstanaft-stack
+provides_tools:
+  - ru_translate
+  - ru_translate_status
+  - ru_catalog_apply
+
+requires_hermes: ">=0.23.1"
+python_dependencies:
+  - "psutil>=5.9,<8"

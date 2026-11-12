@@ -1,0 +1,19 @@
+{
+  "name": "hermes-russian-translate",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "test": "node --test tests/js/*.test.mjs tests/browser/*.test.mjs"
+  },
+  "engines": { "node": ">=24.15.0" },
+  "devDependencies": {
+    "@nanostores/react": "1.1.0",
+    "esbuild": "0.28.2",
+    "jsdom": "29.1.1",
+    "nanostores": "1.4.2",
+    "react": "19.3.0",
+    "react-dom": "19.3.0"
+  }
+}
