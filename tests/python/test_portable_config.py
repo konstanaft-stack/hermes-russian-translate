@@ -15,7 +15,8 @@ class PortableConfigTests(unittest.TestCase):
     def setUp(self):
         self.tmp = tempfile.TemporaryDirectory()
         self.addCleanup(self.tmp.cleanup)
-        self.home = Path(self.tmp.name)
+        # Windows runners may expose the temp directory through an 8.3 alias.
+        self.home = Path(self.tmp.name).resolve()
         env = patch.dict(os.environ, {'HERMES_HOME': str(self.home)})
         env.start()
         self.addCleanup(env.stop)
@@ -121,3 +122,4 @@ class PortableConfigTests(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
+
