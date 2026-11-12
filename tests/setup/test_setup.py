@@ -28,7 +28,8 @@ class InstallationTests(unittest.TestCase):
         self.setup = load_setup()
         self.temp = tempfile.TemporaryDirectory()
         self.addCleanup(self.temp.cleanup)
-        self.root = Path(self.temp.name)
+        # Match the runtime canonical path when Windows supplies an 8.3 temp alias.
+        self.root = Path(self.temp.name).resolve()
 
     def asset(self, data):
         return {"url": "https://github.com/ggml-org/llama.cpp/releases/download/fixture/runtime.zip",
@@ -155,3 +156,4 @@ class InstallationTests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
